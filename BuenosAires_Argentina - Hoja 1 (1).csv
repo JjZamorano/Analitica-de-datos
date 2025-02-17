@@ -1,0 +1,51 @@
+Campo,Tipo,Descripción en Español,Justificación
+id,entero,Identificador unico de Airbnb para el listado,Es esencial para hacer un seguimiento individual de cada propiedad en la base de datos.
+listing_url,texto,URL del listado en Airbnb,Ayuda a localizar cada propiedad de manera rapida y es importante para el analisis de la accesibilidad online.
+scrape_id,bigint,"ID de la ""cosecha"" en Airbnb",Utilizado para rastrear y asociar los datos con el scrape realizado.
+last_scraped,fecha,"Fecha y hora en que el listado fue ""scrapeado"" (extraido de la web)",Importante para determinar la vigencia y actualizacion de los datos.
+source,texto,"Origen del listado (""neighbourhood search"" o ""previous scrape"")",Permite distinguir entre los listados que se han encontrado en nuevas busquedas o en busquedas previas.
+name,texto,Nombre del listado,Fundamental para la identificacion de propiedades al hacer analisis comparativos o de tendencias.
+description,texto,Descripcion detallada del listado,Ayuda en el analisis cualitativo y en la segmentacion de tipos de propiedades.
+neighbourhood,texto,Barrio o vecindario donde se encuentra la propiedad,Fundamental para realizar analisis geoespaciales y segmentar propiedades en funcion de la ubicacion.
+host_id,entero,ID unico de Airbnb para el anfitrion,Es clave para identificar al anfitrion en la base de datos y realizar analisis relacionados con su desempeno.
+host_name,texto,Nombre del anfitrion,Ayuda a segmentar o analizar la cantidad de propiedades de un anfitrion o su popularidad.
+host_since,fecha,Fecha en que el anfitrion se unio a Airbnb,"Ofrece informacion sobre la experiencia del anfitrion, lo que puede correlacionarse con su rendimiento en la plataforma."
+host_is_superhost,booleano,"Indica si el anfitrion es un ""superanfitrion"" (true)","Es relevante para el analisis de la calidad del servicio, ya que los superanfitriones tienen mejores calificaciones y reputacion."
+neighbourhood_cleansed,texto,Barrio geocodificado de la propiedad,"Importante para analisis geograficos mas precisos, segmentacion de mercado y estudio de demanda segun ubicacion."
+latitude,numerico,Latitud de la propiedad,Es esencial para analisis geoespaciales y para realizar comparaciones por ubicacion.
+longitude,numerico,Longitud de la propiedad,Es esencial para realizar analisis geoespaciales precisos y localizar propiedades.
+property_type,texto,"Tipo de propiedad (ejemplo: apartamento, casa, habitacion privada, etc.)",Determina el tipo de experiencia ofrecida y es clave para segmentar y analizar la oferta.
+room_type,texto,"Tipo de habitacion (entera, privada, compartida)","Es un factor crucial para los analisis de precios, demanda y preferencia de los usuarios."
+accommodates,entero,Numero maximo de personas que pueden alojarse,Relevante para determinar la capacidad de alojamiento y las decisiones de los huespedes en funcion de su grupo o necesidades.
+bathrooms,numerico,Numero de banos de la propiedad,Es importante para determinar la calidad y el nivel de confort de la propiedad.
+bedrooms,entero,Numero de dormitorios de la propiedad,"Ayuda a analizar el tamano y la capacidad de la propiedad, lo cual afecta al precio y la demanda."
+beds,entero,Numero de camas en la propiedad,Es relevante para evaluar la capacidad de la propiedad y el nivel de confort para los huespedes.
+amenities,json,Lista de comodidades ofrecidas en la propiedad,Es crucial para el analisis de las caracteristicas que impactan la decision del huesped y los precios de los listados.
+price,numerico,Precio diario en la moneda local,"Es el factor clave en la competitividad del listado, determinando su rentabilidad y demanda."
+minimum_nights,entero,Numero minimo de noches para reservar,Permite analizar las restricciones de reserva que pueden influir en la demanda y la flexibilidad del anfitrion.
+maximum_nights,entero,Numero maximo de noches para reservar,Ayuda en el analisis de la disponibilidad a largo plazo y la flexibilidad de los anfitriones.
+has_availability,booleano,Indica si el listado tiene disponibilidad en el futuro,Ayuda a comprender la tasa de ocupacion de los listados y la disponibilidad futura.
+availability_30,entero,Disponibilidad de la propiedad en los proximos 30 dias,Es importante para analizar la ocupacion y la demanda en el corto plazo.
+availability_60,entero,Disponibilidad de la propiedad en los proximos 60 dias,"Similar a availability_30, pero se enfoca en un analisis a mediano plazo."
+availability_90,entero,Disponibilidad de la propiedad en los proximos 90 dias,Es util para analizar la ocupacion a mas largo plazo y el comportamiento de la demanda.
+calendar_last_scraped,fecha,Fecha en que el calendario de disponibilidad fue actualizado,Proporciona informacion sobre la vigencia de los datos y su actualizacion.
+number_of_reviews,entero,Numero total de reseñas del listado,Importante para evaluar la popularidad y la confianza en la propiedad.
+first_review,fecha,Fecha de la primera reseña,Proporciona informacion sobre la antiguedad y la trayectoria del listado.
+last_review,fecha,Fecha de la ultima reseña,Ayuda a comprender la actividad reciente de los listados y la calidad de servicio a lo largo del tiempo.
+review_scores_rating,numerico,Calificacion total del listado,Es un indicador clave de la calidad del servicio y la satisfaccion de los huespedes.
+review_scores_accuracy,numerico,Calificacion de precision de las reseñas,Es relevante para evaluar cuan representativa es la propiedad segun lo anunciado y la satisfaccion del huesped.
+review_scores_cleanliness,numerico,Calificacion de limpieza de la propiedad,Ayuda a analizar la calidad del alojamiento y el nivel de satisfaccion de los huespedes.
+review_scores_checkin,numerico,Calificacion de facilidad de check-in,Relacionada con la experiencia del huesped y el servicio ofrecido por el anfitrion.
+review_scores_communication,numerico,Calificacion sobre la comunicacion con el anfitrion,Es importante para medir la interaccion y servicio al cliente proporcionado por el anfitrion.
+review_scores_location,numerico,Calificacion sobre la ubicacion de la propiedad,Es relevante para el analisis de la demanda en funcion de la ubicacion y las preferencias de los huespedes.
+review_scores_value,numerico,Calificacion sobre la relacion calidad-precio,Es esencial para analizar la percepcion de los huespedes sobre el valor recibido y la competitividad del listado.
+license,texto,Numero de licencia del listado,Importante para el analisis de la regulacion y la validez legal de los listados.
+instant_bookable,booleano,Indica si la propiedad permite la reserva instantanea,Es relevante para analizar la flexibilidad del anfitrion y su disposicion a aceptar reservas rapidamente.
+calculated_host_listings_count,entero,Numero total de listados de un anfitrion en la ciudad/region,Ayuda a medir la presencia y el impacto del anfitrion en la plataforma.
+reviews_per_month,numerico,Promedio de reseñas por mes,Es util para identificar patrones estacionales y la tasa de actividad de un listado en la plataforma.
+host_identity_verified,booleano,Indica si el anfitrion ha verificado su identidad,Es relevante para el analisis de confianza y seguridad de los listados.
+host_listings_count,entero,Numero total de propiedades que tiene el anfitrion,"Ayuda a entender la escala de operaciones de los anfitriones, lo que influye en su rendimiento."
+host_location,texto,Ubicacion del anfitrion,Relevante para analizar el origen de los anfitriones y su relacion con las zonas de mayor demanda.
+host_about,texto,Descripcion personal del anfitrion,"Aunque mas cualitativa, proporciona informacion sobre la actitud del anfitrion y su enfoque hacia los huespedes."
+host_response_time,texto,Tiempo de respuesta del anfitrion,Ayuda a medir la eficiencia en la atencion al huesped y a correlacionar con la satisfaccion de los mismos
+host_neighbourhood,texto,Barrio del anfitrion,"Es relevante para realizar un análisis sobre la ubicacion de los anfitriones y su relacion con la ubicacion de las propiedades, lo que puede influir en la demanda y el precio."
